@@ -1,0 +1,35 @@
+package Unidad2;
+import java.util.Scanner;
+ 
+
+public class APE6 {
+
+    public static void main(String[] args) {       
+     Scanner scanner = new Scanner(System.in);
+        float t1, t2, t3, tp;
+        double cost;
+
+        System.out.print("Ingrese la primera temperatura: ");
+        t1 = scanner.nextFloat();
+        
+        System.out.print("Ingrese la segunda temperatura: ");
+        t2 = scanner.nextFloat();
+        
+        System.out.print("Ingrese la tercera temperatura: ");
+        t3 = scanner.nextFloat();
+
+        tp = (t1 + t2 + t3) / 3.0f;
+
+        if (tp > 0) {
+            cost = Math.cos(tp);
+            System.out.printf("El coseno del resultado es: %.4f\n", cost);
+        } else {
+            System.out.println("Error: el promedio es menor o igual a cero, no se puede calcular el coseno.");
+        }
+
+        System.out.println("TIPO DE OPERACION: Calculo estadistico (promedio aritmetico) y trigonometrico (coseno).");
+        System.out.printf("El promedio de temperatura es: %.2f\n", tp);
+
+        scanner.close();
+    }
+
